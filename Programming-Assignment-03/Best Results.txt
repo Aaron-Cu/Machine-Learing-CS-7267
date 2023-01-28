@@ -1,0 +1,247 @@
+2022-07-03 01:57:45.749310: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-07-03 01:57:46.159607: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 21670 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3090, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 8000 images belonging to 2 classes.
+Found 2000 images belonging to 2 classes.
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv2d (Conv2D)             (None, 21, 21, 32)        896
+
+ max_pooling2d (MaxPooling2D  (None, 10, 10, 32)       0
+ )
+
+ conv2d_1 (Conv2D)           (None, 3, 3, 32)          9248
+
+ max_pooling2d_1 (MaxPooling  (None, 1, 1, 32)         0
+ 2D)
+
+ flatten (Flatten)           (None, 32)                0
+
+ dense (Dense)               (None, 128)               4224
+
+ dense_1 (Dense)             (None, 1)                 129
+
+=================================================================
+Total params: 14,497
+Trainable params: 14,497
+Non-trainable params: 0
+_________________________________________________________________
+{'cats': 0, 'dogs': 1}
+(64, 64, 3)
+{'cats': 0, 'dogs': 1}
+(64, 64, 3)
+Epoch 1/100
+2022-07-03 01:58:00.536318: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8201
+2022-07-03 01:58:01.529878: E tensorflow/core/platform/windows/subprocess.cc:287] Call to CreateProcess failed. Error code: 2, command: '"ptxas.exe" "--version"'
+2022-07-03 01:58:01.530700: E tensorflow/core/platform/windows/subprocess.cc:287] Call to CreateProcess failed. Error code: 2, command: '"ptxas.exe" "--version"'
+2022-07-03 01:58:01.530907: W tensorflow/stream_executor/gpu/asm_compiler.cc:80] Couldn't get ptxas version string: INTERNAL: Couldn't invoke ptxas.exe --version
+2022-07-03 01:58:01.540924: E tensorflow/core/platform/windows/subprocess.cc:287] Call to CreateProcess failed. Error code: 2, command: '"ptxas.exe" "C:\Users\aaron\AppData\Local\Temp\/tempfile-DESKTOP-8V1A2O9-22d4-29520-5e2e04d5526e5" "-o" "C:\Users\aaron\AppData\Local\Temp\/tempfile-DESKTOP-8V1A2O9-22d4-29520-5e2e04d554aa3" "-arch=sm_86" "--warn-on-spills"'
+2022-07-03 01:58:01.541517: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] INTERNAL: Failed to launch ptxas
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2022-07-03 01:58:02.508660: I tensorflow/stream_executor/cuda/cuda_blas.cc:1786] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+1/1 [==============================] - 11s 11s/step - loss: 9.6369 - accuracy: 0.5002
+Epoch 2/100
+1/1 [==============================] - 10s 10s/step - loss: 2.3401 - accuracy: 0.4931
+Epoch 3/100
+1/1 [==============================] - 7s 7s/step - loss: 2.7963 - accuracy: 0.4990
+Epoch 4/100
+1/1 [==============================] - 31s 31s/step - loss: 1.4229 - accuracy: 0.5033
+Epoch 5/100
+1/1 [==============================] - 7s 7s/step - loss: 1.9519 - accuracy: 0.5025
+Epoch 6/100
+1/1 [==============================] - 22s 22s/step - loss: 1.7620 - accuracy: 0.5024
+Epoch 7/100
+1/1 [==============================] - 6s 6s/step - loss: 1.1745 - accuracy: 0.4979
+Epoch 8/100
+1/1 [==============================] - 29s 29s/step - loss: 1.4095 - accuracy: 0.5041
+Epoch 9/100
+1/1 [==============================] - 6s 6s/step - loss: 1.4999 - accuracy: 0.5044
+Epoch 10/100
+1/1 [==============================] - 6s 6s/step - loss: 1.1455 - accuracy: 0.5094
+Epoch 11/100
+1/1 [==============================] - 8s 8s/step - loss: 1.0734 - accuracy: 0.5023
+Epoch 12/100
+1/1 [==============================] - 6s 6s/step - loss: 1.2596 - accuracy: 0.5025
+Epoch 13/100
+1/1 [==============================] - 32s 32s/step - loss: 1.2130 - accuracy: 0.5039
+Epoch 14/100
+1/1 [==============================] - 6s 6s/step - loss: 1.0127 - accuracy: 0.5076
+Epoch 15/100
+1/1 [==============================] - 25s 25s/step - loss: 0.9551 - accuracy: 0.5110
+Epoch 16/100
+1/1 [==============================] - 10s 10s/step - loss: 1.0503 - accuracy: 0.5100
+Epoch 17/100
+1/1 [==============================] - 6s 6s/step - loss: 1.0374 - accuracy: 0.5111
+Epoch 18/100
+1/1 [==============================] - 6s 6s/step - loss: 0.9128 - accuracy: 0.5084
+Epoch 19/100
+1/1 [==============================] - 6s 6s/step - loss: 0.8461 - accuracy: 0.5166
+Epoch 20/100
+1/1 [==============================] - 6s 6s/step - loss: 0.8837 - accuracy: 0.5138
+Epoch 21/100
+1/1 [==============================] - 23s 23s/step - loss: 0.8970 - accuracy: 0.5116
+Epoch 22/100
+1/1 [==============================] - 6s 6s/step - loss: 0.8329 - accuracy: 0.5164
+Epoch 23/100
+1/1 [==============================] - 7s 7s/step - loss: 0.7673 - accuracy: 0.5182
+Epoch 24/100
+1/1 [==============================] - 6s 6s/step - loss: 0.7604 - accuracy: 0.5140
+Epoch 25/100
+1/1 [==============================] - 6s 6s/step - loss: 0.7797 - accuracy: 0.5138
+Epoch 26/100
+1/1 [==============================] - 12s 12s/step - loss: 0.7685 - accuracy: 0.5167
+Epoch 27/100
+1/1 [==============================] - 8s 8s/step - loss: 0.7323 - accuracy: 0.5320
+Epoch 28/100
+1/1 [==============================] - 6s 6s/step - loss: 0.7157 - accuracy: 0.5383
+Epoch 29/100
+1/1 [==============================] - 6s 6s/step - loss: 0.7355 - accuracy: 0.5217
+Epoch 30/100
+1/1 [==============================] - 6s 6s/step - loss: 0.7470 - accuracy: 0.5191
+Epoch 31/100
+1/1 [==============================] - 7s 7s/step - loss: 0.7278 - accuracy: 0.5230
+Epoch 32/100
+1/1 [==============================] - 12s 12s/step - loss: 0.7090 - accuracy: 0.5364
+Epoch 33/100
+1/1 [==============================] - 10s 10s/step - loss: 0.7149 - accuracy: 0.5399
+Epoch 34/100
+1/1 [==============================] - 20s 20s/step - loss: 0.7288 - accuracy: 0.5280
+Epoch 35/100
+1/1 [==============================] - 6s 6s/step - loss: 0.7260 - accuracy: 0.5299
+Epoch 36/100
+1/1 [==============================] - 6s 6s/step - loss: 0.7114 - accuracy: 0.5361
+Epoch 37/100
+1/1 [==============================] - 6s 6s/step - loss: 0.7055 - accuracy: 0.5410
+Epoch 38/100
+1/1 [==============================] - 6s 6s/step - loss: 0.7127 - accuracy: 0.5260
+Epoch 39/100
+1/1 [==============================] - 6s 6s/step - loss: 0.7179 - accuracy: 0.5240
+Epoch 40/100
+1/1 [==============================] - 6s 6s/step - loss: 0.7113 - accuracy: 0.5269
+Epoch 41/100
+1/1 [==============================] - 6s 6s/step - loss: 0.7016 - accuracy: 0.5393
+Epoch 42/100
+1/1 [==============================] - 6s 6s/step - loss: 0.7001 - accuracy: 0.5428
+Epoch 43/100
+1/1 [==============================] - 27s 27s/step - loss: 0.7040 - accuracy: 0.5396
+Epoch 44/100
+1/1 [==============================] - 25s 25s/step - loss: 0.7040 - accuracy: 0.5426
+Epoch 45/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6986 - accuracy: 0.5428
+Epoch 46/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6938 - accuracy: 0.5539
+Epoch 47/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6942 - accuracy: 0.5475
+Epoch 48/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6953 - accuracy: 0.5471
+Epoch 49/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6930 - accuracy: 0.5495
+Epoch 50/100
+1/1 [==============================] - 40s 40s/step - loss: 0.6895 - accuracy: 0.5537
+Epoch 51/100
+1/1 [==============================] - 8s 8s/step - loss: 0.6888 - accuracy: 0.5549
+Epoch 52/100
+1/1 [==============================] - 7s 7s/step - loss: 0.6897 - accuracy: 0.5524
+Epoch 53/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6892 - accuracy: 0.5554
+Epoch 54/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6869 - accuracy: 0.5604
+Epoch 55/100
+1/1 [==============================] - 8s 8s/step - loss: 0.6856 - accuracy: 0.5585
+Epoch 56/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6862 - accuracy: 0.5599
+Epoch 57/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6860 - accuracy: 0.5630
+Epoch 58/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6840 - accuracy: 0.5612
+Epoch 59/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6824 - accuracy: 0.5636
+Epoch 60/100
+1/1 [==============================] - 11s 11s/step - loss: 0.6822 - accuracy: 0.5654
+Epoch 61/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6821 - accuracy: 0.5630
+Epoch 62/100
+1/1 [==============================] - 14s 14s/step - loss: 0.6810 - accuracy: 0.5642
+Epoch 63/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6798 - accuracy: 0.5656
+Epoch 64/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6795 - accuracy: 0.5649
+Epoch 65/100
+1/1 [==============================] - 8s 8s/step - loss: 0.6790 - accuracy: 0.5674
+Epoch 66/100
+1/1 [==============================] - 30s 30s/step - loss: 0.6779 - accuracy: 0.5689
+Epoch 67/100
+1/1 [==============================] - 15s 15s/step - loss: 0.6769 - accuracy: 0.5673
+Epoch 68/100
+1/1 [==============================] - 8s 8s/step - loss: 0.6763 - accuracy: 0.5686
+Epoch 69/100
+1/1 [==============================] - 233s 233s/step - loss: 0.6756 - accuracy: 0.5715
+Epoch 70/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6745 - accuracy: 0.5721
+Epoch 71/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6736 - accuracy: 0.5735
+Epoch 72/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6730 - accuracy: 0.5754
+Epoch 73/100
+1/1 [==============================] - 37s 37s/step - loss: 0.6723 - accuracy: 0.5757
+Epoch 74/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6715 - accuracy: 0.5748
+Epoch 75/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6706 - accuracy: 0.5776
+Epoch 76/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6700 - accuracy: 0.5775
+Epoch 77/100
+1/1 [==============================] - 23s 23s/step - loss: 0.6693 - accuracy: 0.5790
+Epoch 78/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6684 - accuracy: 0.5791
+Epoch 79/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6677 - accuracy: 0.5766
+Epoch 80/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6670 - accuracy: 0.5786
+Epoch 81/100
+1/1 [==============================] - 8s 8s/step - loss: 0.6661 - accuracy: 0.5799
+Epoch 82/100
+1/1 [==============================] - 9s 9s/step - loss: 0.6654 - accuracy: 0.5800
+Epoch 83/100
+1/1 [==============================] - 12s 12s/step - loss: 0.6646 - accuracy: 0.5809
+Epoch 84/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6638 - accuracy: 0.5834
+Epoch 85/100
+1/1 [==============================] - 7s 7s/step - loss: 0.6630 - accuracy: 0.5861
+Epoch 86/100
+1/1 [==============================] - 8s 8s/step - loss: 0.6623 - accuracy: 0.5856
+Epoch 87/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6615 - accuracy: 0.5876
+Epoch 88/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6607 - accuracy: 0.5893
+Epoch 89/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6600 - accuracy: 0.5897
+Epoch 90/100
+1/1 [==============================] - 7s 7s/step - loss: 0.6593 - accuracy: 0.5916
+Epoch 91/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6586 - accuracy: 0.5932
+Epoch 92/100
+1/1 [==============================] - 17s 17s/step - loss: 0.6579 - accuracy: 0.5938
+Epoch 93/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6571 - accuracy: 0.5966
+Epoch 94/100
+1/1 [==============================] - 9s 9s/step - loss: 0.6563 - accuracy: 0.5994
+Epoch 95/100
+1/1 [==============================] - 9s 9s/step - loss: 0.6556 - accuracy: 0.5985
+Epoch 96/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6548 - accuracy: 0.5989
+Epoch 97/100
+1/1 [==============================] - 10s 10s/step - loss: 0.6541 - accuracy: 0.5997
+Epoch 98/100
+1/1 [==============================] - 8s 8s/step - loss: 0.6533 - accuracy: 0.6016
+Epoch 99/100
+1/1 [==============================] - 7s 7s/step - loss: 0.6526 - accuracy: 0.6024
+Epoch 100/100
+1/1 [==============================] - 6s 6s/step - loss: 0.6519 - accuracy: 0.6026
+1/1 [==============================] - 2s 2s/step
+[[478 522]
+ [490 510]]
